@@ -10,6 +10,10 @@
   device-specific media.
 */
 
+:root {
+  --theme-aside-dark: #273e3c;
+}
+
 body {
   background-color: var(--paper, #f7f9f6);
   background-image:
@@ -39,7 +43,7 @@ body.dark-theme {
 
 /* Visitor / auth screen: soft aqua atmosphere behind the login form */
 .auth-screen {
-  background-color: #f7f9f6;
+  background-color: var(--paper, #f7f9f6);
   background-image:
     radial-gradient(ellipse at 100% 0%, #16c2c322 0%, transparent 45%),
     radial-gradient(ellipse at 0% 100%, #3ddc9720 0%, transparent 45%),
@@ -59,7 +63,7 @@ body.dark-theme {
 /* Dark aside panel keeps its existing solid color, only gains a subtle
    water-droplet texture and gentle sheen. */
 .auth-aside {
-  background-color: #273e3c;
+  background-color: var(--theme-aside-dark);
   background-image:
     linear-gradient(160deg, #16c2c31c 0%, transparent 55%),
     url("assets/backgrounds/bubbles-pattern.svg");
@@ -86,7 +90,7 @@ body.dark-theme {
 }
 
 .company-orbit-panel {
-  background-color: #273e3c;
+  background-color: var(--theme-aside-dark);
   background-image:
     linear-gradient(150deg, #16c2c31c 0%, transparent 55%),
     url("assets/backgrounds/bubbles-pattern.svg");
