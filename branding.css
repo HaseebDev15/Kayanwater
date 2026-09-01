@@ -2,7 +2,7 @@
   position: relative;
   isolation: isolate;
   overflow: visible;
-  background: #ffffff !important;
+  background: linear-gradient(145deg, #43d9d3 0%, #168d95 46%, #0b5266 100%) !important;
   border: 1px solid #7ffff5 !important;
   color: #fff !important;
   font-size: 13px !important;
