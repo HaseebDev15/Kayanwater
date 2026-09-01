@@ -91,9 +91,39 @@
   margin-top: 2px;
 }
 
+.theme-options {
+  display: grid;
+  gap: 8px;
+  padding: 5px 8px 10px;
+  color: var(--muted, #7a8a83);
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.theme-options > div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+}
+
+.theme-button {
+  padding: 8px 5px;
+  border: 1px solid var(--line, #e4e9e6);
+  border-radius: 5px;
+  color: var(--ink, #17221f);
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.theme-button.active {
+  background: var(--navy, #31565c);
+  border-color: var(--navy, #31565c);
+  color: #fff;
+}
+
 .company-orbit-panel {
   display: grid;
-  grid-template-columns: 0.7fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 35px;
   align-items: center;
   background: #273e3c;
@@ -105,8 +135,23 @@
 }
 
 .company-orbit-panel .auth-products {
+  height: 285px;
+  gap: 22px;
   margin: 0;
   justify-content: center;
+}
+
+.company-orbit-panel .product-orbit {
+  width: 185px;
+  height: 245px;
+}
+
+.company-orbit-panel .product-orbit-juice {
+  height: 215px;
+}
+
+.company-orbit-panel .product-orbit > span {
+  bottom: -24px;
 }
 
 .company-orbit-copy span {
@@ -137,4 +182,65 @@
     grid-template-columns: 1fr;
     padding: 28px;
   }
+}
+
+@media (max-width: 640px) {
+  .company-orbit-panel .auth-products {
+    height: 205px;
+    gap: 12px;
+  }
+
+  .company-orbit-panel .product-orbit {
+    width: 125px;
+    height: 175px;
+  }
+
+  .company-orbit-panel .product-orbit-juice {
+    height: 155px;
+  }
+}
+
+body.dark-theme {
+  --ink: #e7f3ef;
+  --muted: #a9c1ba;
+  --line: #36514e;
+  --paper: #152321;
+  --card: #1d302d;
+  --mint: #284b45;
+  --green: #75cba6;
+  --navy: #254f58;
+  background-color: var(--paper);
+  background-image: none;
+}
+
+body.dark-theme .sidebar,
+body.dark-theme .topbar,
+body.dark-theme .account-popover,
+body.dark-theme .stat-card,
+body.dark-theme .panel,
+body.dark-theme .product-card,
+body.dark-theme .values-grid article,
+body.dark-theme .search-box,
+body.dark-theme .admin-stats article {
+  background: var(--card);
+}
+
+body.dark-theme .nav-item:hover,
+body.dark-theme .nav-item.active,
+body.dark-theme .account-menu-item:hover,
+body.dark-theme .account-menu-item:focus-visible {
+  background: #29433e;
+}
+
+body.dark-theme .support-card,
+body.dark-theme .company-hero,
+body.dark-theme .empty-company {
+  background: #28433d;
+}
+
+body.dark-theme .order-row,
+body.dark-theme .table-row,
+body.dark-theme .account-menu-row,
+body.dark-theme .account-menu-list {
+  border-color: var(--line);
 }

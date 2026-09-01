@@ -14,6 +14,19 @@ let toastTimer;
 const authScreen = document.querySelector('#auth-screen');
 const accountKey = 'northstar-account';
 const sessionKey = 'northstar-customer-session';
+const themeKey = 'kayan-theme';
+
+function setTheme(theme) {
+  document.body.classList.toggle('dark-theme', theme === 'dark');
+  localStorage.setItem(themeKey, theme);
+  document.querySelectorAll('.theme-button').forEach(button => {
+    const isSelected = button.dataset.theme === theme;
+    button.classList.toggle('active', isSelected);
+    button.setAttribute('aria-pressed', String(isSelected));
+  });
+}
+
+setTheme(localStorage.getItem(themeKey) === 'dark' ? 'dark' : 'light');
 
 function setAuthMode(mode) {
   const creating = mode === 'create';
@@ -139,11 +152,9 @@ document.querySelectorAll('[data-account-action]').forEach(button => button.addE
   const action = button.dataset.accountAction;
   document.querySelector('#account-popover').classList.add('hidden');
   document.querySelector('#avatar-button').setAttribute('aria-expanded', 'false');
-  if (action === 'profile') showToast('Viewing your Kayan profile.');
-  else if (action === 'orders') goToView('orders');
-  else if (action === 'settings') showToast('Settings are coming soon.');
-  else if (action === 'support') window.open('https://wa.me/923066172891?text=Hello%20Kayan%20Water%20and%20Fresh%20Juice', '_blank', 'noopener');
+  if (action === 'support') window.open('https://wa.me/923066172891?text=Hello%20Kayan%20Water%20and%20Fresh%20Juice', '_blank', 'noopener');
 }));
+document.querySelectorAll('.theme-button').forEach(button => button.addEventListener('click', () => setTheme(button.dataset.theme)));
 document.querySelector('#close-account').addEventListener('click', () => {
   document.querySelector('#account-popover').classList.add('hidden');
   document.querySelector('#avatar-button').setAttribute('aria-expanded', 'false');
