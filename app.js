@@ -144,7 +144,7 @@ document.querySelector('#avatar-button').addEventListener('click', () => {
   const popover = document.querySelector('#account-popover');
   const isOpen = !popover.classList.toggle('hidden');
   document.querySelector('#avatar-button').setAttribute('aria-expanded', String(isOpen));
-  document.querySelector('#account-menu-name').textContent = 'Visitor';
+  document.querySelector('#account-menu-name').textContent = 'Kayan Beverages';
 });
 document.querySelectorAll('[data-account-action]').forEach(button => button.addEventListener('click', () => {
   const action = button.dataset.accountAction;
