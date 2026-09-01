@@ -654,7 +654,7 @@ nav a:focus-visible::after {
 
 .whatsapp-float {
   position: fixed;
-  right: 22px;
+  left: 22px;
   bottom: 22px;
   z-index: 10;
   display: flex;
@@ -972,7 +972,7 @@ footer p {
   }
 
   .whatsapp-float {
-    right: 14px;
+    left: 14px;
     bottom: 14px;
     padding: 12px;
     border-radius: 50%;
