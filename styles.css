@@ -480,8 +480,7 @@ nav a:focus-visible,
   color: #fff;
 }
 
-.contact-icon svg,
-.whatsapp-float-icon svg {
+.contact-icon svg {
   width: 18px;
   height: 18px;
   fill: currentColor;
@@ -657,6 +656,7 @@ footer p {
     right: 14px;
     bottom: 14px;
     padding: 12px;
+    border-radius: 50%;
   }
 
   .whatsapp-float-text {
