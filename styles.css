@@ -317,12 +317,29 @@ nav a:focus-visible::after {
   padding-bottom: 120px;
 }
 
+.products {
+  position: relative;
+  border-radius: 36px;
+  background-color: #f5faf8;
+  background-image:
+    radial-gradient(circle at 6% 8%, #16c2c31f 0%, transparent 26rem),
+    radial-gradient(circle at 96% 92%, #f2a24f1c 0%, transparent 26rem),
+    url("assets/backgrounds/wave-pattern.svg");
+  background-repeat: no-repeat, no-repeat, repeat-x;
+  background-size: auto, auto, 480px 140px;
+  background-position: top left, bottom right, bottom center;
+}
+
 .intro {
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 50px;
   padding-top: 125px;
   padding-bottom: 125px;
+  background-image: radial-gradient(circle at 92% 12%, #f2a24f14 0%, transparent 32rem), url("assets/backgrounds/bubbles-pattern.svg");
+  background-repeat: no-repeat, repeat;
+  background-size: auto, 260px 260px;
+  background-position: top right, center;
 }
 
 .intro > div {
@@ -492,6 +509,11 @@ nav a:focus-visible::after {
   grid-template-columns: 1fr 1fr;
   gap: clamp(45px, 8vw, 120px);
   align-items: center;
+  border-radius: 36px;
+  background-color: #eefaf3;
+  background-image:
+    radial-gradient(circle at 90% 6%, #67b98d22 0%, transparent 28rem),
+    radial-gradient(circle at 4% 96%, #159eaa1c 0%, transparent 28rem);
 }
 
 .quality-art {
@@ -668,6 +690,13 @@ nav a:focus-visible::after {
   padding: 76px 6%;
   margin: 0 auto;
   border-top: 1px solid var(--line);
+  background-image:
+    radial-gradient(circle at 8% 4%, #087e8916 0%, transparent 30rem),
+    radial-gradient(circle at 96% 100%, #f2a24f14 0%, transparent 30rem),
+    url("assets/backgrounds/bubbles-pattern.svg");
+  background-repeat: no-repeat, no-repeat, repeat;
+  background-size: auto, auto, 220px 220px;
+  background-position: top left, bottom right, center;
 }
 
 .developer-info h2 {
@@ -684,6 +713,7 @@ nav a:focus-visible::after {
   border-radius: 50%;
   object-fit: cover;
   object-position: center top;
+  box-shadow: 0 12px 26px #073c5020;
 }
 
 .developer-parentage {
@@ -824,6 +854,7 @@ footer p {
   .intro {
     grid-template-columns: 1fr;
     gap: 0;
+    background-size: auto, 160px 160px;
   }
 
   .section-heading {
@@ -858,6 +889,22 @@ footer p {
   .contact {
     padding-top: 72px;
     padding-bottom: 72px;
+  }
+
+  .developer-info {
+    padding-top: 72px;
+    padding-bottom: 72px;
+    text-align: center;
+  }
+
+  .developer-photo {
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 18px;
+  }
+
+  .developer-links {
+    justify-content: center;
   }
 
   .hero {
@@ -908,6 +955,20 @@ footer p {
   .contact {
     margin-bottom: 18px;
     border-radius: 14px;
+  }
+
+  .products,
+  .quality,
+  .developer-info {
+    border-radius: 20px;
+  }
+
+  .products {
+    background-size: auto, auto, 300px 90px;
+  }
+
+  .developer-info {
+    background-size: auto, auto, 160px 160px;
   }
 
   .whatsapp-float {
