@@ -660,6 +660,86 @@ nav a:focus-visible::after {
   height: 22px;
 }
 
+.developer-info {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.8fr) minmax(0, 1.2fr);
+  gap: clamp(32px, 6vw, 90px);
+  max-width: 1440px;
+  padding: 76px 6%;
+  margin: 0 auto;
+  border-top: 1px solid var(--line);
+}
+
+.developer-info h2 {
+  margin-bottom: 8px;
+  font-size: clamp(30px, 3.2vw, 46px);
+}
+
+.developer-parentage {
+  margin-bottom: 0;
+  color: #52727a;
+}
+
+.developer-bio {
+  max-width: 720px;
+}
+
+.developer-bio h3 {
+  color: var(--aqua);
+}
+
+.developer-bio p {
+  color: #315d68;
+  line-height: 1.7;
+}
+
+.developer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  margin-top: 26px;
+}
+
+.developer-link,
+.developer-contact {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  padding: 10px 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.developer-link:hover,
+.developer-link:focus-visible,
+.developer-contact:hover,
+.developer-contact:focus-visible {
+  box-shadow: 0 8px 16px #073c5014;
+  transform: translateY(-2px);
+}
+
+.developer-link svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+.whatsapp-link {
+  border-color: #25d366;
+  color: #168a43;
+}
+
+.instagram-link {
+  border-color: #db4d78;
+  color: #b72f5d;
+}
+
 footer {
   display: flex;
   align-items: center;
@@ -717,7 +797,8 @@ footer p {
 
   .hero,
   .quality,
-  .contact {
+  .contact,
+  .developer-info {
     grid-template-columns: 1fr;
   }
 
