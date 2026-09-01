@@ -675,6 +675,17 @@ nav a:focus-visible::after {
   font-size: clamp(30px, 3.2vw, 46px);
 }
 
+.developer-photo {
+  display: block;
+  width: 112px;
+  height: 112px;
+  margin: 0 0 20px;
+  border: 3px solid var(--line);
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+}
+
 .developer-parentage {
   margin-bottom: 0;
   color: #52727a;
@@ -725,8 +736,8 @@ nav a:focus-visible::after {
 }
 
 .developer-link svg {
-  width: 18px;
-  height: 18px;
+  width: 14px;
+  height: 14px;
   fill: currentColor;
 }
 
