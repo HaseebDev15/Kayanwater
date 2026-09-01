@@ -120,7 +120,6 @@ function goToView(view) {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 navItems.forEach(item => item.addEventListener('click', () => goToView(item.dataset.view)));
-document.querySelector('#open-login').addEventListener('click', openCustomerAuth);
 document.querySelector('#help-button').addEventListener('click', () => {
   const popover = document.querySelector('#help-popover');
   const isOpen = !popover.classList.toggle('hidden');
@@ -136,6 +135,15 @@ document.querySelector('#avatar-button').addEventListener('click', () => {
   document.querySelector('#avatar-button').setAttribute('aria-expanded', String(isOpen));
   document.querySelector('#account-menu-name').textContent = 'Visitor';
 });
+document.querySelectorAll('[data-account-action]').forEach(button => button.addEventListener('click', () => {
+  const action = button.dataset.accountAction;
+  document.querySelector('#account-popover').classList.add('hidden');
+  document.querySelector('#avatar-button').setAttribute('aria-expanded', 'false');
+  if (action === 'profile') showToast('Viewing your Kayan profile.');
+  else if (action === 'orders') goToView('orders');
+  else if (action === 'settings') showToast('Settings are coming soon.');
+  else if (action === 'support') window.open('https://wa.me/923066172891?text=Hello%20Kayan%20Water%20and%20Fresh%20Juice', '_blank', 'noopener');
+}));
 document.querySelector('#close-account').addEventListener('click', () => {
   document.querySelector('#account-popover').classList.add('hidden');
   document.querySelector('#avatar-button').setAttribute('aria-expanded', 'false');
