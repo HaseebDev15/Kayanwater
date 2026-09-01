@@ -106,3 +106,96 @@ body.dark-theme .sidebar {
 body.dark-theme .topbar {
   background-image: linear-gradient(90deg, #16c2c31a 0%, transparent 40%);
 }
+
+body {
+  --theme-heading: #103f5c;
+  --theme-copy: #334a53;
+  --theme-muted: #5a7078;
+  --theme-accent: #087e84;
+  --theme-on-dark: #f4fffe;
+  --theme-on-dark-muted: #c4dcde;
+}
+
+h1, h2, h3, strong, .breadcrumbs strong, .brand, .nav-item.active {
+  color: var(--theme-heading);
+}
+
+p, .heading-copy, .company-hero > div > p:not(.eyebrow),
+.values-grid p, .developer-page > p:not(.eyebrow),
+.developer-page #developer-profile > p:not(.eyebrow) {
+  color: var(--theme-copy);
+}
+
+small, .eyebrow, .workspace-label, .brand small, .profile small,
+.support-card small, .account-menu-item small, .theme-options,
+.product-details small, .table-row > span, .table-row small,
+.stat-foot span, .developer-details span, .developer-socials span {
+  color: var(--theme-muted);
+}
+
+.text-button, .add-button, .nav-item.active .nav-icon, .values-grid span,
+.company-hero .eyebrow, .company-orbit-copy > span {
+  color: var(--theme-accent);
+}
+
+.company-strip, .company-orbit-panel, .admin-banner, .auth-aside {
+  color: var(--theme-on-dark);
+}
+
+.company-strip h1, .company-strip h2, .company-strip h3, .company-strip strong,
+.company-orbit-panel h1, .company-orbit-panel h2, .company-orbit-panel h3,
+.company-orbit-panel strong, .admin-banner h1, .admin-banner h2,
+.admin-banner h3, .admin-banner strong, .auth-aside h1, .auth-aside h2,
+.auth-aside h3, .auth-aside strong {
+  color: var(--theme-on-dark);
+}
+
+.company-strip p:not(.eyebrow), .company-orbit-copy p:not(.eyebrow),
+.admin-banner .heading-copy, .auth-aside small {
+  color: var(--theme-on-dark-muted);
+}
+
+.company-strip .eyebrow, .company-orbit-copy .eyebrow, .admin-banner .eyebrow,
+.company-strip .company-emblem, .company-orbit-copy > span {
+  color: #91e5e1;
+}
+
+.primary-button {
+  color: #f8ffff;
+  text-decoration: none;
+}
+
+body.dark-theme {
+  --theme-heading: #f5fffe;
+  --theme-copy: #d1e1e2;
+  --theme-muted: #a9c4c7;
+  --theme-accent: #73e4e1;
+  --theme-on-dark: #f5fffe;
+  --theme-on-dark-muted: #c3dadd;
+}
+
+body.dark-theme .company-hero,
+body.dark-theme .support-card,
+body.dark-theme .empty-company {
+  color: var(--theme-heading);
+}
+
+body.dark-theme .company-hero h1,
+body.dark-theme .company-hero h2,
+body.dark-theme .company-hero h3,
+body.dark-theme .support-card strong {
+  color: var(--theme-heading);
+}
+
+body.dark-theme .company-hero > div > p:not(.eyebrow),
+body.dark-theme .support-card small {
+  color: var(--theme-copy);
+}
+
+body.dark-theme .auth-panel,
+body.dark-theme .developer-page {
+  --theme-heading: #103f5c;
+  --theme-copy: #334a53;
+  --theme-muted: #5a7078;
+  --theme-accent: #087e84;
+}
