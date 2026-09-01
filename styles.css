@@ -377,6 +377,12 @@ nav a:focus-visible::after {
   border-radius: 10px;
 }
 
+.card-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .water-visual {
   background: linear-gradient(140deg, #d7f6f2, #a5deda);
 }
