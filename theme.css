@@ -12,6 +12,14 @@
 
 :root {
   --theme-aside-dark: #273e3c;
+  --water-navy: #082d4a;
+  --water-deep: #061e35;
+  --water-aqua: #159eaa;
+  --water-cyan: #78e3e2;
+  --fresh-green: #67b98d;
+  --fresh-orange: #f1ac62;
+  --glass-light: #ffffffbf;
+  --glass-dark: #0d3855d9;
 }
 
 body {
@@ -105,4 +113,252 @@ body.dark-theme .sidebar {
 
 body.dark-theme .topbar {
   background-image: linear-gradient(90deg, #16c2c31a 0%, transparent 40%);
+}
+
+body {
+  --theme-heading: #103f5c;
+  --theme-copy: #334a53;
+  --theme-muted: #5a7078;
+  --theme-accent: #087e84;
+  --theme-accent-on-dark: #91e5e1;
+  --theme-on-dark: #f4fffe;
+  --theme-on-dark-muted: #c4dcde;
+}
+
+h1, h2, h3, strong, .breadcrumbs strong, .brand, .nav-item.active {
+  color: var(--theme-heading);
+}
+
+p, .heading-copy, .company-hero > div > p:not(.eyebrow),
+.values-grid p, .developer-page > p:not(.eyebrow),
+.developer-page #developer-profile > p:not(.eyebrow) {
+  color: var(--theme-copy);
+}
+
+small, .eyebrow, .workspace-label, .brand small, .profile small,
+.support-card small, .account-menu-item small, .theme-options,
+.product-details small, .table-row > span, .table-row small,
+.stat-foot span, .developer-details span, .developer-socials span {
+  color: var(--theme-muted);
+}
+
+.text-button, .add-button, .nav-item.active .nav-icon, .values-grid span,
+.company-hero .eyebrow, .company-orbit-copy > span {
+  color: var(--theme-accent);
+}
+
+.company-strip, .company-orbit-panel, .admin-banner, .auth-aside {
+  color: var(--theme-on-dark);
+}
+
+.company-strip h1, .company-strip h2, .company-strip h3, .company-strip strong,
+.company-orbit-panel h1, .company-orbit-panel h2, .company-orbit-panel h3,
+.company-orbit-panel strong, .admin-banner h1, .admin-banner h2,
+.admin-banner h3, .admin-banner strong, .auth-aside h1, .auth-aside h2,
+.auth-aside h3, .auth-aside strong {
+  color: var(--theme-on-dark);
+}
+
+.company-strip p:not(.eyebrow), .company-orbit-copy p:not(.eyebrow),
+.admin-banner .heading-copy, .auth-aside small {
+  color: var(--theme-on-dark-muted);
+}
+
+.company-strip .eyebrow, .company-orbit-copy .eyebrow, .admin-banner .eyebrow,
+.company-strip .company-emblem, .company-orbit-copy > span {
+  color: var(--theme-accent-on-dark);
+}
+
+.primary-button {
+  color: var(--theme-on-dark);
+  text-decoration: none;
+}
+
+body.dark-theme {
+  --theme-heading: #f5fffe;
+  --theme-copy: #d1e1e2;
+  --theme-muted: #a9c4c7;
+  --theme-accent: #73e4e1;
+  --theme-accent-on-dark: #91e5e1;
+  --theme-on-dark: #f5fffe;
+  --theme-on-dark-muted: #c3dadd;
+}
+
+body.dark-theme .company-hero,
+body.dark-theme .support-card,
+body.dark-theme .empty-company {
+  color: var(--theme-heading);
+}
+
+body.dark-theme .company-hero h1,
+body.dark-theme .company-hero h2,
+body.dark-theme .company-hero h3,
+body.dark-theme .support-card strong {
+  color: var(--theme-heading);
+}
+
+body.dark-theme .company-hero > div > p:not(.eyebrow),
+body.dark-theme .support-card small {
+  color: var(--theme-copy);
+}
+
+body.dark-theme .auth-panel,
+body.dark-theme .developer-page {
+  --theme-heading: #103f5c;
+  --theme-copy: #334a53;
+  --theme-muted: #5a7078;
+  --theme-accent: #087e84;
+}
+
+body {
+  background-color: #eff9fb;
+  background-image:
+    radial-gradient(ellipse at 6% 2%, #78e3e240 0%, transparent 37%),
+    radial-gradient(ellipse at 96% 13%, #67b98d26 0%, transparent 31%),
+    radial-gradient(ellipse at 52% 100%, #f1ac621c 0%, transparent 35%),
+    linear-gradient(152deg, #ffffffd9 0%, #eefaffd9 46%, #e9f6f1d9 100%),
+    url("assets/backgrounds/wave-pattern.svg");
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, repeat-x;
+  background-size: auto, auto, auto, auto, 520px 150px;
+  background-position: top left, top right, bottom center, center, bottom center;
+}
+
+.sidebar,
+.topbar,
+.stat-card,
+.panel,
+.product-card,
+.values-grid article,
+.account-popover,
+.search-box,
+.admin-stats article {
+  background-color: var(--glass-light);
+  box-shadow: 0 12px 28px #0b45600d;
+}
+
+.sidebar,
+.topbar,
+.stat-card,
+.panel,
+.product-card,
+.values-grid article,
+.account-popover,
+.search-box {
+  border-color: #a9d7db91;
+}
+
+.sidebar {
+  background-image:
+    linear-gradient(160deg, #ffffff9c 0%, #dff7f4aa 52%, #e9f6ffd1 100%),
+    linear-gradient(160deg, #159eaa12 0%, transparent 60%);
+}
+
+.topbar {
+  background-image: linear-gradient(90deg, #ffffffcf 0%, #eefbfbab 50%, #ffffffcf 100%);
+}
+
+.company-hero {
+  background-color: #e1f5f5;
+  background-image:
+    radial-gradient(circle at 92% 12%, #78e3e25c 0%, transparent 30%),
+    linear-gradient(130deg, #f8ffffe8 0%, #dff5f4db 52%, #d9efe6db 100%),
+    url("assets/backgrounds/wave-pattern.svg");
+  box-shadow: inset 0 1px #ffffffa6, 0 18px 32px #0b456012;
+}
+
+.company-orbit-panel,
+.company-strip,
+.admin-banner,
+.auth-aside {
+  background-color: var(--water-navy);
+  background-image:
+    radial-gradient(circle at 88% 8%, #78e3e233 0%, transparent 31%),
+    radial-gradient(circle at 10% 92%, #67b98d24 0%, transparent 34%),
+    linear-gradient(145deg, #0a3454 0%, #07556c 53%, #0b314f 100%);
+  box-shadow: inset 0 1px #b1f2ed3b, 0 18px 35px #06233e2b;
+}
+
+.values-grid article {
+  background-image: linear-gradient(145deg, #ffffffc9, #e9f9f6a3);
+}
+
+.product-card {
+  background-image: linear-gradient(145deg, #ffffffde, #edf9f8b3);
+}
+
+.primary-button,
+.category.active {
+  background-image: linear-gradient(135deg, #0b4b6b 0%, #087d8c 58%, #159e8f 100%);
+  box-shadow: 0 8px 18px #087d8c2e;
+}
+
+.product-add,
+.action-icon {
+  background-image: linear-gradient(135deg, #d9f9f7, #cbeee0);
+}
+
+body.dark-theme {
+  --ink: #f2fbff;
+  --muted: #b3cad4;
+  --line: #4c789080;
+  --paper: var(--water-deep);
+  --card: var(--glass-dark);
+  --mint: #164e62;
+  --green: var(--water-cyan);
+  --navy: #0b5870;
+  background-color: var(--water-deep);
+  background-image:
+    radial-gradient(ellipse at 5% 0%, #159eaa38 0%, transparent 39%),
+    radial-gradient(ellipse at 97% 13%, #67b98d1f 0%, transparent 33%),
+    radial-gradient(ellipse at 50% 100%, #f1ac6212 0%, transparent 38%),
+    linear-gradient(145deg, #061d34 0%, #082b48 54%, #061a30 100%),
+    url("assets/backgrounds/wave-pattern.svg");
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, repeat-x;
+  background-size: auto, auto, auto, auto, 520px 150px;
+  background-position: top left, top right, bottom center, center, bottom center;
+}
+
+body.dark-theme .sidebar,
+body.dark-theme .topbar,
+body.dark-theme .account-popover,
+body.dark-theme .stat-card,
+body.dark-theme .panel,
+body.dark-theme .product-card,
+body.dark-theme .values-grid article,
+body.dark-theme .search-box,
+body.dark-theme .admin-stats article {
+  background-color: var(--glass-dark);
+  background-image: linear-gradient(145deg, #1c5b732e 0%, #0a2c48d9 100%);
+  border-color: #75dfe042;
+  box-shadow: inset 0 1px #c1fbf51c, 0 14px 30px #020e1f45;
+}
+
+body.dark-theme .company-hero,
+body.dark-theme .support-card,
+body.dark-theme .empty-company {
+  background-color: #0c3c56;
+  background-image:
+    radial-gradient(circle at 89% 8%, #78e3e22e, transparent 28%),
+    linear-gradient(135deg, #0c3854, #0e5265);
+  box-shadow: inset 0 1px #b1f2ed24, 0 16px 30px #020e1f3d;
+}
+
+body.dark-theme .sidebar {
+  background-image:
+    linear-gradient(160deg, #15536b5c 0%, #0a2c48e8 56%, #061e35ed 100%),
+    linear-gradient(160deg, #159eaa12 0%, transparent 60%);
+}
+
+body.dark-theme .topbar {
+  background-image: linear-gradient(90deg, #0d3d59ec 0%, #0b314de8 50%, #0d3d59ec 100%);
+}
+
+body.dark-theme .company-orbit-panel,
+body.dark-theme .company-strip,
+body.dark-theme .admin-banner,
+body.dark-theme .auth-aside {
+  background-image:
+    radial-gradient(circle at 88% 8%, #78e3e236 0%, transparent 31%),
+    radial-gradient(circle at 10% 92%, #67b98d1c 0%, transparent 34%),
+    linear-gradient(145deg, #082743 0%, #07506b 53%, #071f3a 100%);
 }

@@ -159,11 +159,6 @@ document.querySelector('#close-account').addEventListener('click', () => {
   document.querySelector('#account-popover').classList.add('hidden');
   document.querySelector('#avatar-button').setAttribute('aria-expanded', 'false');
 });
-document.querySelector('#account-logout').addEventListener('click', () => {
-  document.querySelector('#account-popover').classList.add('hidden');
-  document.querySelector('#avatar-button').setAttribute('aria-expanded', 'false');
-  document.querySelector('#logout-button').click();
-});
 document.querySelector('.mobile-menu').addEventListener('click', () => document.querySelector('.sidebar').classList.toggle('open'));
 document.querySelector('#product-search').addEventListener('input', event => renderProducts(event.target.value));
 document.querySelectorAll('.category[data-category]').forEach(button => button.addEventListener('click', () => { selectedCategory = button.dataset.category; button.parentElement.querySelectorAll('.category').forEach(item => item.classList.remove('active')); button.classList.add('active'); renderProducts(document.querySelector('#product-search').value); }));
