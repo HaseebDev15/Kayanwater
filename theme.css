@@ -12,6 +12,14 @@
 
 :root {
   --theme-aside-dark: #273e3c;
+  --water-navy: #082d4a;
+  --water-deep: #061e35;
+  --water-aqua: #159eaa;
+  --water-cyan: #78e3e2;
+  --fresh-green: #67b98d;
+  --fresh-orange: #f1ac62;
+  --glass-light: #ffffffbf;
+  --glass-dark: #0d3855d9;
 }
 
 body {
@@ -200,17 +208,6 @@ body.dark-theme .developer-page {
   --theme-copy: #334a53;
   --theme-muted: #5a7078;
   --theme-accent: #087e84;
-}
-
-:root {
-  --water-navy: #082d4a;
-  --water-deep: #061e35;
-  --water-aqua: #159eaa;
-  --water-cyan: #78e3e2;
-  --fresh-green: #67b98d;
-  --fresh-orange: #f1ac62;
-  --glass-light: #ffffffbf;
-  --glass-dark: #0d3855d9;
 }
 
 body {
