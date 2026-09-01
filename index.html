@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Kayan Water and Fresh Juice customer and admin portal" />
+    <title>Kayan Water and Fresh Juice | Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <section class="auth-screen hidden" id="auth-screen">
+      <div class="auth-aside">
+        <a class="brand auth-brand" href="#"><span class="brand-mark">K</span><span><strong>Kayan Water</strong><small>FRESH JUICE</small></span></a>
+        <div class="auth-quote"><span>✦</span><p>Pure refreshment, made daily.</p><small>Trusted drinking water and fresh juice, prepared with care for families and businesses in Sialkot.</small></div>
+        <div class="auth-products" aria-label="Kayan water and juice products">
+          <div class="product-orbit product-orbit-water"><div class="product-image-wrap"><img src="https://images.unsplash.com/photo-1548839140-29a749e1cf4d?auto=format&fit=crop&w=500&q=85" alt="Mineral water bottle" /></div><span>MINERAL WATER</span></div>
+          <div class="product-orbit product-orbit-juice"><div class="product-image-wrap"><img src="https://images.unsplash.com/photo-1621506289937-a8e4df240d0b?auto=format&fit=crop&w=500&q=85" alt="Fresh juice pack" /></div><span>FRESH JUICE</span></div>
+        </div>
+        <div class="auth-aside-footer">NAZIR PURA · SIALKOT <span>✦</span> SINCE 2023</div>
+      </div>
+      <div class="auth-panel">
+        <div class="auth-form-wrap">
+          <p class="eyebrow" id="auth-eyebrow">Welcome to Kayan Water</p>
+          <h1 id="auth-title">Create your account.</h1>
+          <p class="auth-copy" id="auth-copy">Login to see your Kayan products, orders, and company workspace.</p>
+          <form id="create-form" class="auth-form">
+            <label>Full name<input id="create-name" type="text" placeholder="Visitor" required /></label>
+            <label>Work email<input id="create-email" type="email" placeholder="you@company.com" required /></label>
+            <label>Create password<span class="password-field"><input id="create-password" type="password" placeholder="At least 6 characters" minlength="6" required /><button class="password-toggle" type="button" data-password="create-password">Show</button></span></label>
+            <button class="primary-button auth-submit" type="submit">Create account <span>↗</span></button>
+          </form>
+          <form id="login-form" class="auth-form hidden">
+            <label>Work email<input id="login-email" type="email" placeholder="you@company.com" required /></label>
+            <label>Password<span class="password-field"><input id="login-password" type="password" placeholder="Your password" required /><button class="password-toggle" type="button" data-password="login-password">Show</button></span></label>
+            <button class="primary-button auth-submit" type="submit">Log in <span>↗</span></button>
+          </form>
+          <p class="auth-switch" id="auth-switch">Already have an account? <button type="button" id="show-login">Log in</button></p>
+          <p class="auth-error" id="auth-error" role="alert"></p>
+          <button class="back-to-portal" id="back-to-visitor" type="button">← Back to visitor page</button>
+        </div>
+        <span class="auth-corner">N / 01</span>
+      </div>
+    </section>
+    <section class="auth-screen admin-auth-screen hidden" id="admin-auth-screen">
+      <div class="auth-aside admin-auth-aside">
+        <a class="brand auth-brand" href="#"><span class="brand-mark">K</span><span><strong>Kayan Water</strong><small>ADMIN WORKSPACE</small></span></a>
+        <div class="auth-quote"><span>▣</span><p>Keep every delivery flowing.</p><small>Manage Kayan Water and Fresh Juice products, orders, and customer service.</small></div>
+        <div class="auth-aside-footer">NAZIR PURA · SIALKOT <span>✦</span> ADMIN ACCESS</div>
+      </div>
+      <div class="auth-panel">
+        <div class="auth-form-wrap">
+          <p class="eyebrow" id="admin-auth-eyebrow">Admin access</p>
+          <h1 id="admin-auth-title">Create admin account.</h1>
+          <p class="auth-copy" id="admin-auth-copy">Set up an administrator account to manage the Kayan Water and Fresh Juice portal.</p>
+          <form id="admin-create-form" class="auth-form">
+            <label>Admin name<input id="admin-create-name" type="text" placeholder="Alex Morgan" required /></label>
+            <label>Admin email<input id="admin-create-email" type="email" placeholder="admin@company.com" required /></label>
+            <label>Create password<span class="password-field"><input id="admin-create-password" type="password" placeholder="At least 6 characters" minlength="6" required /><button class="password-toggle" type="button" data-password="admin-create-password">Show</button></span></label>
+            <label>Company admin key<span class="password-field"><input id="admin-create-key" type="password" placeholder="Enter your invitation key" required /><button class="password-toggle" type="button" data-password="admin-create-key">Show</button></span></label>
+            <button class="primary-button auth-submit" type="submit">Create admin account <span>↗</span></button>
+          </form>
+          <form id="admin-login-form" class="auth-form hidden">
+            <label>Admin email<input id="admin-login-email" type="email" placeholder="admin@company.com" required /></label>
+            <label>Password<span class="password-field"><input id="admin-login-password" type="password" placeholder="Your password" required /><button class="password-toggle" type="button" data-password="admin-login-password">Show</button></span></label>
+            <button class="primary-button auth-submit" type="submit">Log in as admin <span>↗</span></button>
+          </form>
+          <p class="auth-switch" id="admin-auth-switch">Already an admin? <button type="button" id="show-admin-login">Log in</button></p>
+          <p class="auth-error" id="admin-auth-error" role="alert"></p>
+          <button class="back-to-portal" id="back-to-portal" type="button">← Back to customer portal</button>
+        </div>
+        <span class="auth-corner">ADMIN / 01</span>
+      </div>
+    </section>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <a class="brand" href="#catalog" aria-label="Kayan Water and Fresh Juice home">
+          <span class="brand-mark">K</span>
+          <span><strong>Kayan Water</strong><small>FRESH JUICE</small></span>
+        </a>
+        <div class="workspace-label">Workspace</div>
+        <nav class="primary-nav" aria-label="Main navigation">
+          <button class="nav-item" data-view="catalog"><span class="nav-icon">▦</span>Products</button>
+          <button class="nav-item" data-view="company"><span class="nav-icon">◎</span>Company info</button>
+          <button class="nav-item admin-link" data-view="admin"><span class="nav-icon">▣</span>Admin portal</button>
+          <button class="nav-item" data-view="developer"><span class="nav-icon">◇</span>Developer</button>
+          <button class="nav-item logout-item hidden" id="logout-button"><span class="nav-icon">↪</span>Logout</button>
+        </nav>
+        <div class="sidebar-bottom">
+          <div class="support-card"><span class="support-dot"></span><div><strong>Need a hand?</strong><small>Our team replies in under 2 hrs.</small></div><span class="arrow">↗</span></div>
+          <div class="profile"><div class="avatar">V</div><div><strong>Visitor</strong><small>Buyer account</small></div><button class="more-button" aria-label="Account menu">•••</button></div>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <header class="topbar">
+          <button class="mobile-menu" aria-label="Open navigation">☰</button>
+          <div class="breadcrumbs"><span>Workspace</span><i>/</i><strong id="breadcrumb-current">Overview</strong></div>
+          <div class="top-actions"><a class="whatsapp-button" href="https://wa.me/923066172891?text=Hello%20Kayan%20Water%20and%20Fresh%20Juice" target="_blank" rel="noopener" aria-label="Contact owner on WhatsApp" title="Contact owner on WhatsApp"><img src="https://cdn.simpleicons.org/whatsapp/ffffff" alt="" /></a><button class="icon-button" aria-label="Notifications">♧<span class="notification-dot"></span></button><button class="help-button" id="help-button" aria-expanded="false">? <span>Help center</span></button><button class="login-link" id="open-login">Login</button><button class="mini-avatar avatar-button" id="avatar-button" aria-label="Open Kayan account menu" aria-expanded="false">K</button></div>
+          <aside class="account-popover hidden" id="account-popover" aria-label="Account menu"><div class="account-popover-heading"><div class="mini-avatar">K</div><div><strong id="account-menu-name">Visitor</strong><small>Customer account</small></div><button id="close-account" aria-label="Close account menu">×</button></div><div class="account-menu-row"><span>Company</span><strong>Kayan Water</strong></div><div class="account-menu-row"><span>Location</span><strong>Nazir Pura, Sialkot</strong></div><button class="account-logout" id="account-logout">↪ Logout</button></aside>
+          <aside class="help-popover hidden" id="help-popover" aria-label="Help center"><div class="help-popover-heading"><div><p class="eyebrow">Kayan support</p><h2>How can we help?</h2></div><button id="close-help" aria-label="Close help">×</button></div><div class="help-item"><span>01</span><div><strong>Browse products</strong><small>Open Products to view the available water and juice catalog.</small></div></div><div class="help-item"><span>02</span><div><strong>Place an order</strong><small>Choose a product from the catalog and select the order button.</small></div></div><div class="help-item"><span>03</span><div><strong>Need account help?</strong><small>Use Login, or contact the owner directly on WhatsApp.</small></div></div><a class="help-whatsapp" href="https://wa.me/923066172891?text=Hello%20Kayan%20Water%20and%20Fresh%20Juice" target="_blank" rel="noopener">Chat with Kayan support <span>↗</span></a></aside>
+        </header>
+
+        <section class="page-view active" id="overview-view">
+          <div class="page-heading"><div><p class="eyebrow">Tuesday, September 01, 2026</p><h1>Good morning, Visitor.</h1><p class="heading-copy">Here’s the latest from your Kayan Water and Fresh Juice workspace.</p></div><button class="primary-button" data-view="catalog">Browse catalog <span>↗</span></button></div>
+          <div class="stats-grid">
+            <article class="stat-card"><div class="stat-label">Open orders <span class="stat-icon blue">↗</span></div><div class="stat-value">03</div><div class="stat-foot positive">↑ 1 <span>from last month</span></div></article>
+            <article class="stat-card"><div class="stat-label">Total spend <span class="stat-icon green">$</span></div><div class="stat-value">$12,840</div><div class="stat-foot positive">↑ 8.4% <span>vs. last month</span></div></article>
+            <article class="stat-card"><div class="stat-label">Saved items <span class="stat-icon orange">♡</span></div><div class="stat-value">12</div><div class="stat-foot neutral">4 <span>back in stock soon</span></div></article>
+          </div>
+          <div class="content-grid">
+            <section class="panel recent-orders"><div class="panel-heading"><div><p class="eyebrow">Activity</p><h2>Recent orders</h2></div><button class="text-button" data-view="orders">View all <span>→</span></button></div><div class="order-list" id="overview-orders"></div></section>
+            <section class="panel essentials"><div class="panel-heading"><div><p class="eyebrow">Curated for you</p><h2>Top essentials</h2></div><button class="circle-button" data-view="catalog" aria-label="View catalog">→</button></div><div class="essential-item"><img src="https://images.unsplash.com/photo-1584302179602-e4c3d3fd629d?auto=format&fit=crop&w=160&q=80" alt="Matte black reusable bottle" /><div><strong>Hydra steel bottle</strong><small>Everyday essentials</small><span>$28.00</span></div><button class="add-button" data-view="catalog" aria-label="Open catalog">→</button></div><div class="essential-item"><img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=160&q=80" alt="Desk workspace with notebook" /><div><strong>Field notes set</strong><small>Workday goods</small><span>$18.00</span></div><button class="add-button" data-view="catalog" aria-label="Open catalog">→</button></div><div class="essential-item"><img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=160&q=80" alt="Canvas travel tote" /><div><strong>Canvas carryall</strong><small>Travel & carry</small><span>$64.00</span></div><button class="add-button" data-view="catalog" aria-label="Open catalog">→</button></div></section>
+          </div>
+          <section class="company-strip"><div class="company-emblem">✦</div><div><p class="eyebrow">The Kayan standard</p><h2>Pure water. Fresh taste.</h2><p>Clean drinking water and fresh juice, prepared with care for the Sialkot community.</p></div><button class="outline-button" data-view="company">Meet the company <span>↗</span></button></section>
+        </section>
+
+        <section class="page-view" id="catalog-view"><div class="page-heading"><div><p class="eyebrow">Kayan product collection</p><h1>Freshness for every day.</h1><p class="heading-copy">Explore our drinking water and fresh juice products.</p></div><div class="catalog-tools"><div class="search-box">⌕ <input id="product-search" placeholder="Search products" /></div><button class="filter-button">☷ Filter</button></div></div><div class="category-row"><button class="category active" data-category="all">All products</button><button class="category" data-category="Drinking water">Drinking water</button><button class="category" data-category="Fresh juice">Fresh juice</button></div><div class="product-grid" id="product-grid"></div></section>
+
+        <section class="page-view" id="orders-view"><div class="page-heading"><div><p class="eyebrow">Purchasing</p><h1>Your orders.</h1><p class="heading-copy">Track deliveries and review everything you’ve purchased.</p></div><button class="outline-button" data-view="catalog">＋ New order</button></div><div class="order-filters"><button class="category active">All orders <span>8</span></button><button class="category">In progress <span>3</span></button><button class="category">Delivered <span>5</span></button></div><section class="panel full-panel"><div class="table-head"><span>Order</span><span>Date</span><span>Items</span><span>Total</span><span>Status</span><span></span></div><div id="orders-table"></div></section></section>
+
+        <section class="page-view" id="company-view"><div class="company-hero"><div><p class="eyebrow">Since 2023 · Nazir Pura, Sialkot</p><h1>Kayan Water and Fresh Juice</h1><p>Clean drinking water and fresh juice, prepared locally with care for homes, shops, and businesses.</p><button class="primary-button">Learn about Kayan <span>↗</span></button></div><img src="https://images.unsplash.com/photo-1548839140-29a749e1cf4d?auto=format&fit=crop&w=1000&q=85" alt="Fresh water bottle" /></div><div class="values-grid"><article><span>01</span><h2>Pure water</h2><p>Reliable, refreshing drinking water for every day.</p></article><article><span>02</span><h2>Fresh juice</h2><p>Bright, flavorful juice made for sharing.</p></article><article><span>03</span><h2>Local care</h2><p>Proudly serving Nazir Pura and the Sialkot community.</p></article></div></section>
+
+        <section class="page-view admin-view" id="admin-view"><div class="admin-banner"><div><p class="eyebrow">Admin workspace</p><h1>Portal control center.</h1><p class="heading-copy">Manage your catalog and customer experience from one place.</p></div></div><div class="admin-grid admin-grid-single"><section class="panel admin-actions"><div class="panel-heading"><div><p class="eyebrow">Catalog</p><h2>Products you added</h2></div></div><div id="admin-products" class="admin-products"></div><button class="action-row" id="add-product-action"><span class="action-icon">＋</span><span><strong>Add product</strong><small>Create a new catalog listing</small></span><b>→</b></button><button class="action-row" id="company-settings-action"><span class="action-icon">◌</span><span><strong>Company settings</strong><small>Update portal details</small></span><b>→</b></button></section></div></section>
+        <section class="page-view" id="developer-view"><div class="developer-layout"><div class="developer-page"><p class="eyebrow">Developer profile</p><div id="developer-profile"><h1>Your developer profile.</h1><p>Add your details using the form.</p></div></div><div><div class="developer-lock panel" id="developer-lock"><p class="eyebrow">Private settings</p><h2>Developer profile is protected</h2><p>Only the developer can edit this information.</p><label>Developer access key<input id="developer-access-key" type="password" placeholder="Enter your private key" /></label><button class="primary-button" id="unlock-developer" type="button">Unlock editing <span>↗</span></button><p class="auth-error" id="developer-error" role="alert"></p></div><form class="developer-form panel hidden" id="developer-form"><div class="panel-heading"><div><p class="eyebrow">Profile settings</p><h2>Edit developer details</h2></div></div><label>Your name<input id="developer-name" type="text" placeholder="Your name" required /></label><label>Profile subtitle<input id="developer-subtitle" type="text" value="Son of Ghulam Haider" placeholder="Son of Ghulam Haider" /></label><label>Description<textarea id="developer-description" rows="3" placeholder="Tell visitors about your work" required></textarea></label><label>Picture URL<input id="developer-picture" type="url" placeholder="https://example.com/your-picture.jpg" required /></label><label>Location<input id="developer-location" type="text" placeholder="Sialkot, Pakistan" required /></label><div class="social-fields"><label>Facebook<input id="developer-facebook" type="url" placeholder="Facebook profile URL" /></label><label>Instagram<input id="developer-instagram" type="url" placeholder="Instagram profile URL" /></label><label>LinkedIn<input id="developer-linkedin" type="url" placeholder="LinkedIn profile URL" /></label><label>Website<input id="developer-website" type="url" placeholder="Your website URL" /></label><label>WhatsApp number<input id="developer-whatsapp" type="tel" value="923059150231" placeholder="923059150231" /></label></div><button class="primary-button" type="submit">Save developer profile <span>↗</span></button></form></div></div></section>
+      </main>
+    </div>
+    <a class="floating-whatsapp" href="https://wa.me/923066172891?text=Hello%20Kayan%20Water%20and%20Fresh%20Juice" target="_blank" rel="noopener" aria-label="Contact Kayan on WhatsApp" title="Contact Kayan on WhatsApp"><img src="https://cdn.simpleicons.org/whatsapp/ffffff" alt="" /><span>Contact us</span></a>
+    <div class="modal-backdrop hidden" id="product-modal">
+      <form class="product-form panel" id="product-form">
+        <div class="panel-heading"><div><p class="eyebrow">Admin catalog</p><h2 id="product-modal-title">Add product</h2></div><button type="button" class="modal-close" id="close-product-modal" aria-label="Close product form">×</button></div>
+        <label>Product name<input id="new-product-name" type="text" placeholder="Mineral water 1.5L" required /></label>
+        <label>Category<select id="new-product-category"><option>Drinking water</option><option>Fresh juice</option></select></label>
+        <label>Price<input id="new-product-price" type="text" placeholder="Rs. 120" required /></label>
+        <label>Product picture URL<input id="new-product-image" type="url" placeholder="https://example.com/product.jpg" required /></label>
+        <button class="primary-button" id="product-submit" type="submit">Publish product <span>↗</span></button>
+        <p class="form-note">Published products appear immediately in the public Products page.</p>
+      </form>
+    </div>
+    <div class="modal-backdrop hidden" id="company-modal">
+      <form class="product-form panel" id="company-form">
+        <div class="panel-heading"><div><p class="eyebrow">Admin settings</p><h2>Company settings</h2></div><button type="button" class="modal-close" id="close-company-modal" aria-label="Close company settings">×</button></div>
+        <label>Company name<input id="company-name" type="text" value="Kayan Water and Fresh Juice" required /></label>
+        <label>Location<input id="company-location" type="text" value="Nazir Pura, Sialkot" required /></label>
+        <label>Company description<textarea id="company-description" rows="3" required>Clean drinking water and fresh juice, prepared locally with care for homes, shops, and businesses.</textarea></label>
+        <button class="primary-button" type="submit">Save company details <span>↗</span></button>
+      </form>
+    </div>
+    <div class="toast" id="toast" role="status"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
