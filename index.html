@@ -62,9 +62,9 @@
         <div><p class="eyebrow">LET'S STAY REFRESHED</p><h2>Stay Fresh.<br /><em>Stay Hydrated.</em></h2><p>Choose Kayan Water & Fresh Juice for your daily refreshment needs.</p></div>
         <div>
           <form class="contact-form" id="contact-form">
-            <label>Name<input name="name" autocomplete="name" required /></label>
-            <label>Email<input type="email" name="email" autocomplete="email" required /></label>
-            <label>Message<textarea name="message" rows="3" required></textarea></label>
+            <label for="contact-name">Name</label><input id="contact-name" type="text" name="name" autocomplete="name" required />
+            <label for="contact-email">Email</label><input id="contact-email" type="email" name="email" autocomplete="email" required />
+            <label for="contact-message">Message</label><textarea id="contact-message" name="message" rows="3" required></textarea>
             <button class="button" type="submit">Send inquiry <span>→</span></button>
             <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
           </form>
@@ -73,7 +73,7 @@
       </section>
     </main>
 
-    <footer><a class="brand" href="#home"><span class="brand-mark">K</span><span>KAYAN <small>WATER & FRESH JUICE</small></span></a><p>© <span id="current-year">2026</span> Kayan Water & Fresh Juice</p><div><a href="#home">Instagram</a><a href="#home">Facebook</a><a href="#home">LinkedIn</a></div></footer>
+    <footer><a class="brand" href="#home"><span class="brand-mark">K</span><span>KAYAN <small>WATER & FRESH JUICE</small></span></a><p>© <span id="current-year">2026</span> Kayan Water & Fresh Juice</p></footer>
     <script src="site.js" defer></script>
   </body>
 </html>
