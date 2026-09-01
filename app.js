@@ -47,8 +47,8 @@ function unlockPortal(name) {
   const firstName = name.split(' ')[0];
   const heading = document.querySelector('#overview-view h1');
   if (heading) heading.textContent = `Good morning, ${firstName}.`;
-  document.querySelector('.profile strong').textContent = name;
-  document.querySelector('.avatar').textContent = name.split(' ').map(part => part[0]).join('').slice(0, 2).toUpperCase();
+  const sidebarHandle = document.querySelector('#sidebar-contact-name');
+  if (sidebarHandle) sidebarHandle.textContent = '@Haseeb';
   document.querySelector('#logout-button').classList.remove('hidden');
   goToView('catalog');
 }
