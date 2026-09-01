@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="900" viewBox="0 0 900 900">
+  <defs>
+    <filter id="soft-blur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="70"/>
+    </filter>
+    <radialGradient id="aqua-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#3ddc97" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#3ddc97" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="blue-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#159b98" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#159b98" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="citrus-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f2a45e" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="#f2a45e" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <g filter="url(#soft-blur)">
+    <circle cx="250" cy="260" r="260" fill="url(#blue-glow)"/>
+    <circle cx="650" cy="620" r="300" fill="url(#aqua-glow)"/>
+    <circle cx="700" cy="180" r="180" fill="url(#citrus-glow)"/>
+  </g>
+</svg>
