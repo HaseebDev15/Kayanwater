@@ -10,6 +10,7 @@
   letter-spacing: -0.5px;
   text-shadow: 0 1px 2px #053d4c;
   box-shadow: inset 1px 1px 1px #d8fffb99, inset -2px -3px 5px #062f464d, 0 4px 9px #0d596452 !important;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 .kayan-avatar::before {
