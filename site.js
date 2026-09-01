@@ -1,9 +1,10 @@
 const menuToggle = document.querySelector('.menu-toggle');
 const navigation = document.querySelector('#main-navigation');
-const contactForm = document.querySelector('#contact-form');
-const formStatus = document.querySelector('#form-status');
+const currentYear = document.querySelector('#current-year');
 
-document.querySelector('#current-year').textContent = new Date().getFullYear();
+if (currentYear) {
+  currentYear.textContent = new Date().getFullYear();
+}
 
 if (menuToggle && navigation) {
   menuToggle.addEventListener('click', () => {
@@ -15,12 +16,4 @@ if (menuToggle && navigation) {
     navigation.classList.remove('is-open');
     menuToggle.setAttribute('aria-expanded', 'false');
   }));
-}
-
-if (contactForm && formStatus) {
-  contactForm.addEventListener('submit', event => {
-    event.preventDefault();
-    formStatus.textContent = 'Thank you for your interest. Please email hello@kayanwater.com to send your inquiry.';
-    contactForm.reset();
-  });
 }
