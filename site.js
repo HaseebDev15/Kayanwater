@@ -17,8 +17,6 @@ navigation.querySelectorAll('a').forEach(link => link.addEventListener('click', 
 
 contactForm.addEventListener('submit', event => {
   event.preventDefault();
-  if (!contactForm.reportValidity()) return;
-
   formStatus.textContent = 'Thank you for your interest. Please email hello@kayanwater.com to send your inquiry.';
   contactForm.reset();
 });
