@@ -228,6 +228,7 @@ body {
 .stat-card,
 .panel,
 .product-card,
+.gallery-item,
 .values-grid article,
 .account-popover,
 .search-box,
@@ -241,6 +242,7 @@ body {
 .stat-card,
 .panel,
 .product-card,
+.gallery-item,
 .values-grid article,
 .account-popover,
 .search-box {
@@ -324,6 +326,7 @@ body.dark-theme .account-popover,
 body.dark-theme .stat-card,
 body.dark-theme .panel,
 body.dark-theme .product-card,
+body.dark-theme .gallery-item,
 body.dark-theme .values-grid article,
 body.dark-theme .search-box,
 body.dark-theme .admin-stats article {
