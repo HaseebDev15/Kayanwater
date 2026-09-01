@@ -13,7 +13,8 @@
   <body>
     <header class="site-header">
       <a class="brand" href="#home" aria-label="Kayan home"><span class="brand-mark">K</span><span>KAYAN <small>WATER & FRESH JUICE</small></span></a>
-      <nav aria-label="Main navigation"><a href="#about">About</a><a href="#products">Products</a><a href="#quality">Quality</a><a href="#contact">Contact</a></nav>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation"><span></span><span></span><span></span><span class="sr-only">Toggle navigation</span></button>
+      <nav id="main-navigation" aria-label="Main navigation"><a href="#about">About</a><a href="#products">Products</a><a href="#quality">Quality</a><a href="#contact">Contact</a></nav>
       <a class="header-cta" href="#contact">Get in touch <span>→</span></a>
     </header>
 
@@ -59,10 +60,20 @@
 
       <section class="contact" id="contact">
         <div><p class="eyebrow">LET'S STAY REFRESHED</p><h2>Stay Fresh.<br /><em>Stay Hydrated.</em></h2><p>Choose Kayan Water & Fresh Juice for your daily refreshment needs.</p></div>
-        <div class="contact-details"><a href="tel:+920000000000"><small>PHONE</small>+92 XXX XXX XXXX</a><a href="https://wa.me/920000000000"><small>WHATSAPP</small>+92 XXX XXX XXXX</a><a href="mailto:hello@kayanwater.com"><small>EMAIL</small>hello@kayanwater.com</a><span><small>FACTORY / OFFICE</small>Your address, Pakistan</span></div>
+        <div>
+          <form class="contact-form" id="contact-form">
+            <div class="contact-field"><label for="contact-name">Name</label><input id="contact-name" type="text" name="name" autocomplete="name" required /></div>
+            <div class="contact-field"><label for="contact-email">Email</label><input id="contact-email" type="email" name="email" autocomplete="email" required /></div>
+            <div class="contact-field"><label for="contact-message">Message</label><textarea id="contact-message" name="message" rows="3" required></textarea></div>
+            <button class="button" type="submit">Send inquiry <span>→</span></button>
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+          </form>
+          <div class="contact-details"><a href="mailto:hello@kayanwater.com"><small>EMAIL</small>hello@kayanwater.com</a><span><small>LOCATION</small>Pakistan</span></div>
+        </div>
       </section>
     </main>
 
-    <footer><a class="brand" href="#home"><span class="brand-mark">K</span><span>KAYAN <small>WATER & FRESH JUICE</small></span></a><p>© 2026 Kayan Water & Fresh Juice</p><div><a href="#">Instagram</a><a href="#">Facebook</a><a href="#">LinkedIn</a></div></footer>
+    <footer><a class="brand" href="#home"><span class="brand-mark">K</span><span>KAYAN <small>WATER & FRESH JUICE</small></span></a><p>© <span id="current-year">2026</span> Kayan Water & Fresh Juice</p></footer>
+    <script src="site.js" defer></script>
   </body>
 </html>
