@@ -112,6 +112,7 @@ body {
   --theme-copy: #334a53;
   --theme-muted: #5a7078;
   --theme-accent: #087e84;
+  --theme-accent-on-dark: #91e5e1;
   --theme-on-dark: #f4fffe;
   --theme-on-dark-muted: #c4dcde;
 }
@@ -157,11 +158,11 @@ small, .eyebrow, .workspace-label, .brand small, .profile small,
 
 .company-strip .eyebrow, .company-orbit-copy .eyebrow, .admin-banner .eyebrow,
 .company-strip .company-emblem, .company-orbit-copy > span {
-  color: #91e5e1;
+  color: var(--theme-accent-on-dark);
 }
 
 .primary-button {
-  color: #f8ffff;
+  color: var(--theme-on-dark);
   text-decoration: none;
 }
 
@@ -170,6 +171,7 @@ body.dark-theme {
   --theme-copy: #d1e1e2;
   --theme-muted: #a9c4c7;
   --theme-accent: #73e4e1;
+  --theme-accent-on-dark: #91e5e1;
   --theme-on-dark: #f5fffe;
   --theme-on-dark-muted: #c3dadd;
 }
