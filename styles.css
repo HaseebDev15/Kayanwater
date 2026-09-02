@@ -603,7 +603,7 @@ nav a:focus-visible::after {
 
 .contact-details {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 16px;
 }
 
@@ -650,6 +650,56 @@ nav a:focus-visible::after {
 
 .icon-email {
   background: var(--aqua);
+}
+
+.icon-tiktok {
+  background: #000000;
+}
+
+.location-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 16px;
+  padding: 12px;
+  border: 1px solid #e2c07f;
+  border-radius: 12px;
+  background: #ffffffcc;
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.location-card:hover,
+.location-card:focus-visible {
+  box-shadow: 0 8px 16px #7843111a;
+  transform: translateY(-2px);
+}
+
+.location-preview {
+  flex-shrink: 0;
+  width: 84px;
+  height: 56px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.location-preview svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.location-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  color: var(--ink);
+  font-size: 14px;
+}
+
+.location-text strong {
+  font-family: var(--serif);
+  font-size: 16px;
 }
 
 .whatsapp-float {
@@ -871,6 +921,7 @@ footer p {
 
   .contact-details {
     max-width: 430px;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -950,6 +1001,16 @@ footer p {
   .contact-details {
     grid-template-columns: repeat(2, 1fr);
     gap: 8px;
+  }
+
+  .location-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .location-preview {
+    width: 100%;
+    height: 90px;
   }
 
   .contact {
